@@ -1,7 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { categories } from "@/data/products";
-import { Award, Truck, ShieldCheck, Hammer } from "lucide-react";
+import { Award, Truck, ShieldCheck, Hammer, Star } from "lucide-react";
 import hero from "@/assets/hero.jpg";
+
+const reviews = [
+  { name: "Grace M.", text: "My coffee table arrived in perfect condition. The wood quality is excellent and delivery was fast." },
+  { name: "Brian O.", text: "Bomax built a custom TV stand for our living room. Great workmanship and very affordable." },
+  { name: "Wanjiku K.", text: "I love how organized my closet is now. The team was professional from order to delivery." },
+  { name: "David N.", text: "Best shoe rack I have bought in Nairobi. Sturdy, stylish and exactly as pictured." },
+  { name: "Amina H.", text: "Wide variety to choose from and the staff helped me pick pieces that matched my space." },
+  { name: "James T.", text: "Quick M-Pesa payment and same-week delivery. Will definitely recommend Bomax furniture." },
+];
 
 export const Route = createFileRoute("/")({
   component: Index,
