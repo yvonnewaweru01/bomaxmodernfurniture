@@ -58,6 +58,13 @@ function CategoryPage() {
           ))}
         </div>
       )}
+
+      <section className="mt-20 rounded-2xl bg-secondary/40 border border-border p-8 md:p-12">
+        <h2 className="text-2xl md:text-3xl font-serif text-foreground">Quality home furniture, delivered fast across Nairobi.</h2>
+        <p className="mt-4 text-muted-foreground leading-relaxed max-w-4xl">
+          Bomax Modern Furniture builds every piece from carefully selected, high-quality wood and durable finishes that stand up to everyday use. Whether you need a sleek TV stand, a spacious closet, a tidy shoe rack, or a stylish coffee table, our wide variety of modern home furniture is designed to fit Kenyan homes and budgets. We keep delivery times short, prices affordable, and craftsmanship honest — so you get furniture that looks great and lasts for years.
+        </p>
+      </section>
     </div>
   );
 }
