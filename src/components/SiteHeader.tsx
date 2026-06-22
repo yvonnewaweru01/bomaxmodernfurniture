@@ -14,8 +14,6 @@ export function SiteHeader() {
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/80">
           <Link to="/" className="hover:text-foreground">Home</Link>
           <a href="/#collections" className="hover:text-foreground">Collections</a>
-          <a href="/#about" className="hover:text-foreground">About</a>
-          <a href="/#contact" className="hover:text-foreground">Contact</a>
         </nav>
         <Link to="/cart" className="relative inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium hover:bg-secondary">
           <ShoppingBag className="h-5 w-5" />
