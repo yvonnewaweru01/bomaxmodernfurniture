@@ -41,7 +41,6 @@ function Index() {
         </div>
       </section>
 
-
       {/* Why Choose Us */}
       <section className="bg-secondary/40 border-y border-border">
         <div className="mx-auto max-w-7xl px-6 py-20">
@@ -100,6 +99,31 @@ function Index() {
         </div>
       </section>
 
+      {/* Reviews */}
+      <section className="overflow-hidden border-y border-border bg-secondary/40 py-16">
+        <div className="mx-auto max-w-7xl px-6 mb-10 text-center">
+          <p className="text-sm uppercase tracking-widest text-muted-foreground">Customer Reviews</p>
+          <h2 className="mt-3 text-4xl font-serif text-foreground">What our buyers say</h2>
+        </div>
+        <div className="relative">
+          <div className="flex w-max animate-marquee-ltr">
+            {[...reviews, ...reviews].map((r, i) => (
+              <div
+                key={`${r.name}-${i}`}
+                className="mx-4 w-80 shrink-0 rounded-xl border border-border bg-card p-6"
+              >
+                <div className="flex gap-1 text-amber-500">
+                  {Array.from({ length: 5 }).map((_, idx) => (
+                    <Star key={idx} className="h-4 w-4 fill-current" />
+                  ))}
+                </div>
+                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">"{r.text}"</p>
+                <p className="mt-4 text-sm font-semibold text-foreground">— {r.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
