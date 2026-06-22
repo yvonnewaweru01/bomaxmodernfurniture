@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { toast } from "sonner";
-import { getCategory, getProductsByCategory, formatKES, type CategorySlug } from "@/data/products";
+import { getCategory, getProductsByCategory, formatKES, type CategorySlug, type Product } from "@/data/products";
 import { useCart } from "@/lib/cart";
 
 export const Route = createFileRoute("/category/$slug")({
@@ -35,7 +35,7 @@ function CategoryPage() {
         <p className="text-muted-foreground">No pieces available right now. Check back soon.</p>
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((p) => (
+          {products.map((p: Product) => (
             <article key={p.id} className="group rounded-xl overflow-hidden border border-border bg-card">
               <div className="aspect-square overflow-hidden bg-secondary">
                 <img src={p.image} alt={p.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
