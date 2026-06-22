@@ -28,35 +28,10 @@ function Index() {
             <a href="#collections" className="inline-flex items-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90">
               Shop Collections
             </a>
-            <a href="#about" className="inline-flex items-center rounded-md border border-input bg-background/80 px-6 py-3 text-sm font-medium text-foreground hover:bg-secondary">
-              About Bomax
-            </a>
           </div>
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-sm uppercase tracking-widest text-muted-foreground">About Us</p>
-            <h2 className="mt-3 text-4xl font-serif text-foreground">A workshop built on care.</h2>
-            <p className="mt-5 text-muted-foreground leading-relaxed">
-              Bomax Modern Furniture is a Nairobi-based workshop creating thoughtful, hard-wearing pieces for modern Kenyan homes. From statement coffee tables to organized closets, every piece is finished by hand in our Pipeline workshop — designed to look beautiful and last for years.
-            </p>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              We believe great furniture should be honest: solid construction, clean lines, and prices that respect your investment.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            {categories.slice(0, 4).map((c) => (
-              <div key={c.slug} className="aspect-square overflow-hidden rounded-lg bg-secondary">
-                <img src={c.image} alt={c.name} className="h-full w-full object-cover" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why Choose Us */}
       <section className="bg-secondary/40 border-y border-border">
@@ -116,12 +91,6 @@ function Index() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-7xl px-6 pb-8 -mt-8">
-        <div className="rounded-2xl bg-primary text-primary-foreground p-10 md:p-14 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif">Visit our workshop in Pipeline, Embakasi.</h2>
-          <p className="mt-3 opacity-90">Call us on 0757 854 534 to place an order or schedule a viewing.</p>
-        </div>
-      </section>
     </div>
   );
 }
