@@ -32,28 +32,6 @@ function Index() {
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-sm uppercase tracking-widest text-muted-foreground">About Us</p>
-            <h2 className="mt-3 text-4xl font-serif text-foreground">A workshop built on care.</h2>
-            <p className="mt-5 text-muted-foreground leading-relaxed">
-              Bomax Modern Furniture is a Nairobi-based workshop creating thoughtful, hard-wearing pieces for modern Kenyan homes. From statement coffee tables to organized closets, every piece is finished by hand in our Pipeline workshop — designed to look beautiful and last for years.
-            </p>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              We believe great furniture should be honest: solid construction, clean lines, and prices that respect your investment.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            {categories.slice(0, 4).map((c) => (
-              <div key={c.slug} className="aspect-square overflow-hidden rounded-lg bg-secondary">
-                <img src={c.image} alt={c.name} className="h-full w-full object-cover" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why Choose Us */}
       <section className="bg-secondary/40 border-y border-border">
