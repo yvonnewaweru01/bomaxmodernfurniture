@@ -1,7 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { categories } from "@/data/products";
-import { Award, Truck, ShieldCheck, Hammer } from "lucide-react";
+import { Award, Truck, ShieldCheck, Hammer, Star } from "lucide-react";
 import hero from "@/assets/hero.jpg";
+
+const reviews = [
+  { name: "Grace M.", text: "My coffee table arrived in perfect condition. The wood quality is excellent and delivery was fast." },
+  { name: "Brian O.", text: "Bomax built a custom TV stand for our living room. Great workmanship and very affordable." },
+  { name: "Wanjiku K.", text: "I love how organized my closet is now. The team was professional from order to delivery." },
+  { name: "David N.", text: "Best shoe rack I have bought in Nairobi. Sturdy, stylish and exactly as pictured." },
+  { name: "Amina H.", text: "Wide variety to choose from and the staff helped me pick pieces that matched my space." },
+  { name: "James T.", text: "Quick M-Pesa payment and same-week delivery. Will definitely recommend Bomax furniture." },
+];
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -31,7 +40,6 @@ function Index() {
           </div>
         </div>
       </section>
-
 
       {/* Why Choose Us */}
       <section className="bg-secondary/40 border-y border-border">
@@ -91,6 +99,31 @@ function Index() {
         </div>
       </section>
 
+      {/* Reviews */}
+      <section className="overflow-hidden border-y border-border bg-secondary/40 py-16">
+        <div className="mx-auto max-w-7xl px-6 mb-10 text-center">
+          <p className="text-sm uppercase tracking-widest text-muted-foreground">Customer Reviews</p>
+          <h2 className="mt-3 text-4xl font-serif text-foreground">What our buyers say</h2>
+        </div>
+        <div className="relative">
+          <div className="flex w-max animate-marquee-ltr">
+            {[...reviews, ...reviews].map((r, i) => (
+              <div
+                key={`${r.name}-${i}`}
+                className="mx-4 w-80 shrink-0 rounded-xl border border-border bg-card p-6"
+              >
+                <div className="flex gap-1 text-amber-500">
+                  {Array.from({ length: 5 }).map((_, idx) => (
+                    <Star key={idx} className="h-4 w-4 fill-current" />
+                  ))}
+                </div>
+                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">"{r.text}"</p>
+                <p className="mt-4 text-sm font-semibold text-foreground">— {r.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
