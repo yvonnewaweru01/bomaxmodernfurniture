@@ -28,9 +28,6 @@ function Index() {
             <a href="#collections" className="inline-flex items-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90">
               Shop Collections
             </a>
-            <a href="#about" className="inline-flex items-center rounded-md border border-input bg-background/80 px-6 py-3 text-sm font-medium text-foreground hover:bg-secondary">
-              About Bomax
-            </a>
           </div>
         </div>
       </section>
