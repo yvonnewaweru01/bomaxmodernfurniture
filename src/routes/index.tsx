@@ -91,12 +91,6 @@ function Index() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-7xl px-6 pb-8 -mt-8">
-        <div className="rounded-2xl bg-primary text-primary-foreground p-10 md:p-14 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif">Visit our workshop in Pipeline, Embakasi.</h2>
-          <p className="mt-3 opacity-90">Call us on 0757 854 534 to place an order or schedule a viewing.</p>
-        </div>
-      </section>
     </div>
   );
 }
